@@ -1,0 +1,16 @@
+[package]
+name = "test-captrs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[target.'cfg(not(windows))'.dependencies]
+x11cap = "0.4.1"
+
+[target.'cfg(windows)'.dependencies]
+dxgcap = "0.2.4"
+
+[dependencies]
+shuteye = "0.2"
+captrs = "0.3.1"
